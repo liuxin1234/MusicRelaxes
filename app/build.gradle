@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.liux.musicrelaxes"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //本地项目依赖的librarin
+    compile project(':module')
+
+
+    //分包
+    compile 'com.android.support:multidex:1.0.1'
+    //Logger日志
+    compile 'com.orhanobut:logger:2.1.1'
+    //butterknift
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    //Glide
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    //RecyclerView
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.27'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    //设置圆角图片 以及其他样式
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    //侧滑返回
+    compile 'me.imid.swipebacklayout.lib:library:1.1.0'
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.1.1'
+    //retrofit2.0
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:retrofit-converters:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    //retrofit-string类型解析器
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+}

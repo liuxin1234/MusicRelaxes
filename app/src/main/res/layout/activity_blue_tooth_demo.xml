@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_jump_new_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到API测试界面"/>
+
+    <Button
+        android:id="@+id/btn_Open_BlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开蓝牙设备"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本机蓝牙信息："/>
+
+    <TextView
+        android:id="@+id/tv_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_Find_Device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索蓝牙设备"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索的蓝牙信息："/>
+
+    <TextView
+        android:id="@+id/tv_Find_Device_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>

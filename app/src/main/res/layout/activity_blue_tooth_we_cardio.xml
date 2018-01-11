@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_UpData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上传蓝牙数据"/>
+
+    <Button
+        android:id="@+id/btn_Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加用户记录"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传蓝牙数据返回的信息："/>
+            <TextView
+                android:id="@+id/tv_response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="添加用户记录返回的信息："/>
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

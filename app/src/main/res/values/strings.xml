@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">MusicRelaxes</string>
+
+    <string name="text_Instructions">
+        \n
+        请按照右图所示，双手的食指\n
+        和中指轻轻卡主HRV的传感器\n
+        ，绿色指示灯在朝向自己。\n
+        \n
+        请静静的放松，舒服的靠在沙\n
+        发上，深呼吸，保持5分钟。
+    </string>
+
+    <string name="text_choose_music_Instructions">
+        \n
+        请点击试听按钮，来选择一首\n
+        您喜欢的歌曲，计算机将自动\n
+        记住你选择的曲目。并通过微\n
+        信或者QQ发送到你的移动终端。\n
+        \n
+        试听结束后，请点击下一步，\n
+        并跟随提示来放松的聆听音乐。\n
+    </string>
+
+    //blueTooth
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+
+
+
+</resources>
