@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="140dp"
             android:background="@color/white"
             android:padding="1dp"
             android:orientation="horizontal">
@@ -51,16 +51,46 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_margin="10dp"
                 android:layout_gravity="center"
                 android:background="@color/color_bg">
 
-                <include layout="@layout/include_choose_music"/>
-                <include layout="@layout/include_choose_music"/>
-                <include layout="@layout/include_choose_music"/>
-                <include layout="@layout/include_choose_music"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:background="@drawable/textview_border"
+                        android:textColor="@color/tv_play_music_01"
+                        android:text="序号"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/tv_play_music_01"
+                        android:background="@drawable/textview_border"
+                        android:text="曲目"/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/tv_play_music_01"
+                        android:background="@drawable/textview_border"
+                        android:text="试听"/>
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </android.support.v7.widget.RecyclerView>
 
 
             </LinearLayout>
@@ -78,7 +108,7 @@
         android:layout_marginTop="20dp"
         android:background="@color/btn_bg"
         android:padding="5dp"
-        android:text="进入下一个界面"
+        android:text="进入音乐播放界面"
         android:textColor="@color/mask_tags_12"/>
 
 </LinearLayout>

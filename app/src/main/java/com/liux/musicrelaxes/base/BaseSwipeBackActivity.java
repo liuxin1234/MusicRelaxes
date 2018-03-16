@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import com.liux.musicrelaxes.R;
+import com.liux.musicrelaxes.service.MusicPlayerManager;
 import com.liux.musicrelaxes.view.ToolbarHelper;
 
 import java.lang.reflect.Field;
@@ -58,6 +59,9 @@ public abstract class BaseSwipeBackActivity extends SwipeBackActivity {
 
         initView();
         initSwipeBackLayout();
+
+        //启动音乐服务
+        MusicPlayerManager.startServiceIfNecessary(getApplicationContext());
     }
 
     protected abstract void initToolbar(ToolbarHelper toolbarHelper);

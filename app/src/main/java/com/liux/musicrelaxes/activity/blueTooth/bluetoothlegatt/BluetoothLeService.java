@@ -30,7 +30,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.util.Log;
+
+import com.orhanobut.logger.Logger;
 
 import java.util.List;
 import java.util.UUID;
@@ -73,7 +76,6 @@ public class BluetoothLeService extends Service {
     public final static UUID UUID_HRP_SERVICE =
             UUID.fromString(SampleGattAttributes.HRP_SERVICE);
 
-    public static final UUID HEART_RATE_MEASUREMENT_CHARAC = UUID.fromString("0000ffb2-0000-1000-8000-00805f9b34fb");
 
     // Implements callback methods for GATT events that the app cares about.  For example,
     // connection change and services discovered.
@@ -151,7 +153,6 @@ public class BluetoothLeService extends Service {
         //这是对心率测量的特殊处理。数据解析是按照配置文件的规格进行的
         if (UUID_HEART_RATE_MEASUREMENT.equals(characteristic.getUuid())) {
             int flag = characteristic.getProperties();
-            Log.e("flag===",""+flag + "\n" + (flag & 0x01));
             int format = -1;
             if ((flag & 0x01) != 0) {
                 format = BluetoothGattCharacteristic.FORMAT_UINT16;
@@ -159,11 +160,11 @@ public class BluetoothLeService extends Service {
             } else {
                 format = BluetoothGattCharacteristic.FORMAT_UINT8;
                 Log.d(TAG, "Heart rate format UINT8."); //1字节 uint8_t
-
             }
             final int heartRate = characteristic.getIntValue(format, 1);
             Log.d(TAG, String.format("Received heart rate: %d", heartRate));
-            intent.putExtra(EXTRA_DATA_HEART_RATE, String.valueOf(heartRate));
+//            intent.putExtra(EXTRA_DATA_HEART_RATE, String.valueOf(heartRate));
+//            intent.putExtra(EXTRA_DATA_HEART_RATE, heartRate);
 
             //这里读取到数据
             final byte[] data = characteristic.getValue();
@@ -176,6 +177,8 @@ public class BluetoothLeService extends Service {
                 intent.putExtra(EXTRA_DATA,  stringBuilder.toString());
             }
 
+//            //这里传的是btye[]的数据
+//            intent.putExtra(EXTRA_DATA_HEART_RATE,new String(data));
 
         } else {
             // For all other profiles, writes the data formatted in HEX. 对于所有的文件，写入十六进制格式的文件

@@ -36,12 +36,30 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".activity.blueTooth.bluetoothlegatt.BluetoothLeService" android:enabled="true"/>
+        <!--全面屏的沉浸式布局适配 这里的value值最好是2.1或者更高-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+
+
+        <service android:name=".activity.blueTooth.bluetoothlegatt.BluetoothLeService"
+                 android:enabled="true"/>
+
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+
 
         <activity android:name=".activity.MainActivity"
                   android:screenOrientation="landscape"/>
         <activity android:name=".activity.ChooseMusicActivity"
-                  android:screenOrientation="landscape"/>
+                  android:screenOrientation="landscape">
+
+        </activity>
+
         <activity android:name=".activity.PlayMusicActivity"
                   android:screenOrientation="landscape"/>
 
@@ -50,7 +68,19 @@
         <activity android:name=".activity.blueTooth.bluetoothlegatt.DeviceControlActivity"
                   android:screenOrientation="landscape"/>
         <activity android:name=".activity.blueTooth.BlueToothWeCardioActivity"
+                  android:screenOrientation="landscape">
+
+        </activity>
+
+        <activity android:name=".activity.blueTooth.BlueToothConnectActivity"
+                  android:screenOrientation="landscape">
+
+        </activity>
+
+        <activity android:name=".activity.StateNullActivity"
                   android:screenOrientation="landscape"/>
+
+
     </application>
 
 </manifest>

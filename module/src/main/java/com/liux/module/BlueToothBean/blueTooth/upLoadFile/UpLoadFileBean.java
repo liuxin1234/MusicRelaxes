@@ -1,11 +1,11 @@
-package com.liux.module.BlueToothBean;
+package com.liux.module.BlueToothBean.blueTooth.upLoadFile;
 
 /**
  * Created by
  * 项目名称：com.liux.module.BlueToothBean
  * 项目日期：2018/1/9
  * 作者：liux
- * 功能：
+ * 功能：上传文件数据的整体 返回数据 Sting类型
  *
  * @author 750954283(qq)
  */

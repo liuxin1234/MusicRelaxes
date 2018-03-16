@@ -62,6 +62,7 @@
                     android:textColor="@color/tv_play_music_01"
                     android:text="计算机检测到您正在聆听歌曲:"/>
                 <TextView
+                    android:id="@+id/tv_Title"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -82,33 +83,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_hear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/btn_bg"
-            android:padding="5dp"
-            android:text="继续聆听"
-            android:textColor="@color/mask_tags_12"/>
-        <Button
-            android:id="@+id/btn_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/btn_bg"
-            android:padding="5dp"
-            android:layout_marginLeft="20dp"
-            android:text="重新检测"
-            android:textColor="@color/mask_tags_12"/>
 
-    </LinearLayout>
 
 
 </LinearLayout>

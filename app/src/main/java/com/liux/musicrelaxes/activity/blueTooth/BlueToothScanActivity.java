@@ -107,7 +107,6 @@ public class BlueToothScanActivity extends AppCompatActivity {
                     showToast("蓝牙已经处于打开状态....");
 //                    mBluetoothAdapter.disable(); //关闭蓝牙
                 } else {
-
                     //调用系统API打开
                     Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                     startActivityForResult(intent, REQUEST_OPEN_BT);

@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">MusicRelaxes</string>
 
+    <string name="text_stateNull">
+        \n
+        你还未分配测试记录,请老师\n
+        分配。\n
+    </string>
+
+
     <string name="text_Instructions">
         \n
         请按照右图所示，双手的食指\n
@@ -8,8 +15,13 @@
         ，绿色指示灯在朝向自己。\n
         \n
         请静静的放松，舒服的靠在沙\n
-        发上，深呼吸，保持5分钟。
+        发上，深呼吸，保持2分钟。
     </string>
+
+    <string name="text_Discomfort">
+        \n心率检查完毕，若感觉有不适状况，请在右边文本框里填写身体不适的信息！\n若没有不适状况，可以直接提交检测数据！
+    </string>
+
 
     <string name="text_choose_music_Instructions">
         \n

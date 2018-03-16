@@ -26,8 +26,6 @@ public class SampleGattAttributes {
 
     /**心率检测器入口的UUID**/
     public static final String HRP_SERVICE = "0000ffb1-0000-1000-8000-00805f9b34fb";
-    /**产品3C认证**/
-    public static final String CCC = "00002902-0000-1000-8000-00805f9b34fb";
 
     /**心率测量这个是根据心率测试仪硬件的UUID**/
     public static String HEART_RATE_MEASUREMENT = "0000ffb2-0000-1000-8000-00805f9b34fb";

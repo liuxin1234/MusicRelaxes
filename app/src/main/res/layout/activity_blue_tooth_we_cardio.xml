@@ -2,48 +2,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/icon_login_bg">
 
-    <Button
-        android:id="@+id/btn_UpData"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="上传蓝牙数据"/>
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_Add"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo01"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/logo02"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="增加用户记录"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:background="@color/white"
+            android:padding="1dp"
+            android:orientation="horizontal">
             <TextView
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_bg"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:textSize="12sp"
+                android:text="@string/text_Discomfort"
+                android:textColor="@color/darkorange"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="上传蓝牙数据返回的信息："/>
-            <TextView
-                android:id="@+id/tv_response"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@color/color_bg">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="添加用户记录返回的信息："/>
-            <TextView
-                android:id="@+id/tv_add"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/et_Discomfort"
+                    android:layout_width="190dp"
+                    android:layout_height="140dp"
+                    android:hint="在此输入内容...."
+                    android:textSize="12sp"
+                    android:gravity="top"/>
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
-    </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Up_BlueTooth_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/btn_bg"
+        android:padding="5dp"
+        android:text="上传心率测试的数据"
+        android:textColor="@color/mask_tags_12"/>
 
 </LinearLayout>
